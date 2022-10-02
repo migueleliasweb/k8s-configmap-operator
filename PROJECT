@@ -3,4 +3,13 @@ layout:
 - go.kubebuilder.io/v3
 projectName: k8s-configmap-operator
 repo: github.com/migueleliasweb/k8s-configmap-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: migueleliasweb.github.io
+  kind: DistributedConfig
+  path: github.com/migueleliasweb/k8s-configmap-operator/api/v1alpha1
+  version: v1alpha1
 version: "3"
