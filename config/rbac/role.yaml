@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - migueleliasweb.github.io
+  resources:
+  - distributedconfigs
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - migueleliasweb.github.io
+  resources:
+  - distributedconfigs/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - migueleliasweb.github.io
+  resources:
+  - distributedconfigs/status
+  verbs:
+  - get
+  - patch
+  - update
